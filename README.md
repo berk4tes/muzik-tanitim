@@ -12,7 +12,7 @@ Bu projeyi basitce kendi muzigimi tanitmak icin yapiyorum.
 - Temel sayfa yapisi (header, main, footer)
 - Basit stil duzenlemeleri (background rengi, yazilarin stilleri)
 
-## Kullanidiklarim
+## Kullandiklarim
 
 - HTML5
 - CSS3 (inline ve dahili stil)
