@@ -96,20 +96,34 @@ hr{
 
 #songLinks {
   
+  display: none;  
   position: absolute;
   background-color: rgb(186, 186, 199);
-  min-width: 160px;
+  min-width: 100px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
   z-index: 1;
+  
+  text-align: center; 
+  
+  
 }
 
 .dropdown-content a {
   color: #4a148c;
-  padding: 10px 16px;
+  padding: 0px 8px 10px 1px;
   text-decoration: none;
   display: block;
   border-bottom: 1px solid #ddd;
+  padding-left: 6px;
+  
 }
+
+.song-dropdown:hover #songLinks {
+  display: block;
+}
+
+
+
 
 
 
@@ -123,15 +137,114 @@ hr{
 
 }
 
+.all-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
 
-.album-cover {
 
-    display: block; 
-    margin: 0 auto; 
-    width: 300px; 
-    border: 3px solid #272627;
+
+.card-space-location {
+
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    margin: 30px auto;
 
 }
+
+.card-space-location audio {
+  margin-top: 10px;
+  
+  width: 100%;
+  display: block;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  
+
+  
+}
+
+.card-space-location:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;            
+  box-sizing: border-box; 
+  
+
+}
+
+.card-front img {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  
+}
+
+.card-back {
+  background-color: #4a148c;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-back a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-back a:hover {
+  text-decoration: underline;
+}
+
+#card-title {
+
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 1px #062b7a;
+
+}
+
+.album-info {
+
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 1px #062b7a;
+    margin-bottom: 10px;
+    font-size: 14px;
+    
+
+}
+
 
 .songs1 {
 
@@ -164,7 +277,7 @@ hr{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: center; 
     text-shadow:1px 1px #062b7a;
-    padding-bottom: 20px;
+    padding-bottom: 3px; 
     
 
 }
@@ -228,4 +341,79 @@ hr{
     text-shadow:1px 1px #062b7a; 
     background-color: rgb(186, 186, 199);
 
+}
+
+
+.form-toggle-button {
+  display: inline-block;
+  background-color: #4a148c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 20px auto;
+  text-align: center;
+  
+}
+
+.form-container {
+  display: none;
+  margin-top: 20px;
+}
+
+#toggleForm:checked + .form-toggle-button + .form-container {
+  display: block;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgb(186, 186, 199);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #3c0370;
+}
+
+.contact-form input {
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #4a148c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #360a66;
+}
+
+
+.form-title {
+  background-color: #4a148c;
+  color: white;                
+  text-align: center;
+  font-size: 16px;
+  margin: -20px -20px 20px -20px; 
+  padding: 12px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
