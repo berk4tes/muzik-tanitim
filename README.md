@@ -47,6 +47,19 @@ Bu projeyi basitce kendi muzigimi tanitmak icin yapiyorum.
 - Text-shadow, box-shadow, border-radius
 - Git & GitHub ile versiyon kontrolü ve yayınlama
 
+
+## Ekran Görüntüleri
+
+Ana Sayfa ve Kartların Görünümü:
+![Ana Sayfa](images/screenshot1.png)
+
+Müzik Alanı:
+![Kartlar](images/screenshot2.png)
+
+Form ve Footer Bölümü:
+![Form ve Footer Bölümü](images/screenshot3.png)
+
+
 ## Proje Amaci
 
 Bu proje, HTML ve CSS bilgilerini gerçek bir uygulama üzerinde test etmek ve müzik tanıtımı için işlevsel bir kişisel sayfa oluşturmak amacıyla geliştirilmiştir. Ek olarak, GitHub üzerinden paylaşım ve versiyon takibi gibi pratikler kazanılmıştır.
